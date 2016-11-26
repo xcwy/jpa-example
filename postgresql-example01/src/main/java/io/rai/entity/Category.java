@@ -1,7 +1,5 @@
 package io.rai.entity;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 
 /**
