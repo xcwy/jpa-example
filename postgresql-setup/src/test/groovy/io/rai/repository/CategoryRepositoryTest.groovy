@@ -33,7 +33,7 @@ class CategoryRepositoryTest extends Specification {
     def "test 2 : update Category name"() {
         given:
         def id = 21
-        def name = ""
+        def name = "computer"
 
         when:
         def c = cr.findOne(id)
@@ -44,14 +44,16 @@ class CategoryRepositoryTest extends Specification {
         true
     }
 
-//    def "test 3 : delete Category by id"() {
-//        given:
-//
-//        when:
-//
-//        then:
-//        true
-//    }
+    def "test 3 : delete Category by id"() {
+        given:
+        def id = 37
+
+        when:
+        cr.delete(id)
+
+        then:
+        true
+    }
 
     def "test 4 : query Category by id"() {
         given:

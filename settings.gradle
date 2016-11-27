@@ -1,3 +1,4 @@
 rootProject.name = 'jpa-example'
-include 'postgresql-example01'
+include 'postgresql-setup'
+include 'postgresql-jsonobject'
 
