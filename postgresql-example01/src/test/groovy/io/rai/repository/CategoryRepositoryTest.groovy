@@ -30,15 +30,20 @@ class CategoryRepositoryTest extends Specification {
         savedCategory.name == name
     }
 
-//    def "test 2 : update Category name"() {
-//        given:
-//
-//        when:
-//
-//        then:
-//        true
-//    }
-//
+    def "test 2 : update Category name"() {
+        given:
+        def id = 21
+        def name = ""
+
+        when:
+        def c = cr.findOne(id)
+        c.setName(name)
+        cr.save(c)
+
+        then:
+        true
+    }
+
 //    def "test 3 : delete Category by id"() {
 //        given:
 //
@@ -47,13 +52,18 @@ class CategoryRepositoryTest extends Specification {
 //        then:
 //        true
 //    }
-//
-//    def "test 4 : query Category by name"() {
-//        given:
-//
-//        when:
-//
-//        then:
-//        true
-//    }
+
+    def "test 4 : query Category by id"() {
+        given:
+        def id = 12
+
+        when:
+        def c = cr.findOne(id)
+
+        then:
+        c != null
+        c.id == id
+        println(c.createdAt)
+        println(c.lastModifiedAt)
+    }
 }

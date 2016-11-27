@@ -21,6 +21,7 @@ subprojects {
         compile('postgresql:postgresql:9.1-901-1.jdbc4')
         compile('com.h2database:h2:1.4.190')
         compile('javax.inject:javax.inject:1')
+        compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.6.0')
 
         testCompile('org.springframework.boot:spring-boot-starter-test:1.4.0.RELEASE')
         testCompile('org.codehaus.groovy:groovy-all:2.3.10')
